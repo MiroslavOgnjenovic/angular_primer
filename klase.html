@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>Angular 1</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="klase.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+	<script src="klase.js"></script>
+</head>
+<body ng-controller="myController">		<!-- data atributi -->
+	<!-- <h1>Hello Angular</h1> -->
+	<!-- {{ name }} -->		<!-- data binding -->
+	<!-- {{ array[0] }} -->
+	<!-- {{ person.name}} -->
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Genre</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="movie in allMovies">
+						<td>{{movie.name}}</td>
+						<!-- <td ng-class="movie.genre">{{movie.genre}}</td> -->
+						<td ng-class="classType">{{movie.genre}}</td>
+
+					</tr>
+				</tbody>
+			</table><br>
+			<input type="text" class="form-control" ng-model="classType" placeholder="Enter class name:">
+			<h1>{{ classType }}</h1>
+		</div>			
+	</div>
+	<script src="movieDB.js"></script>
+</body>
+</html>

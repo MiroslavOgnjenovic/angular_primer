@@ -1,0 +1,15 @@
+.default{
+	background-color: : gray;
+}
+.western{
+	background-color: orange;
+}
+.comedy{
+	background-color: lightblue;
+}
+.drama{
+	background-color: lightgreen;
+}
+.horor{
+	background-color: green;
+}
